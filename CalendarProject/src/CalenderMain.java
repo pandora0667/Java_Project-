@@ -9,7 +9,7 @@ public class CalenderMain {
     CalenderPrint calenderPrint = new CalenderPrint();
     boolean run = true;
 
-    System.out.println("JAVA Calender Print Project V.1.0");
+    System.out.println("JAVA Calender Print Project V.2.0");
     System.out.println();
 
     while (run){

@@ -41,7 +41,7 @@ public class CalenderPrint {
     for (int i = 1; i < dayOfWeek; i++) {
       returnCalender.append("\t *");
     }
-    for (int i = 1; i < lastDay; i++) {
+    for (int i = 1; i <= lastDay; i++) {
       int dayOfWeekCount = dayOfWeek;
       dayOfWeek++;
       returnCalender.append(" \t"+ i);
@@ -55,8 +55,8 @@ public class CalenderPrint {
   @Override
   public String toString() {
     String year = Integer.toString(calendar.get(Calendar.YEAR));
-    String month = Integer.toString(calendar.get(Calendar.MONTH));
+    String month = Integer.toString(calendar.get(Calendar.MONTH)+1);
 
-    return year + "년 " + month + "일 ";
+    return year + "년 " + month + "월 ";
   }
 }
