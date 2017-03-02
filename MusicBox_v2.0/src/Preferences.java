@@ -9,10 +9,12 @@ public class Preferences {
   // Field
   File path;
   private String[] songTitles;
-  protected String playSong;
+  private String[] playList;
 
   // Constructor
   public Preferences() {
+//    songTitles = null;
+//    playList = null;
     path = new File("D:\\Music");
     directorySearcher();
   }
@@ -34,18 +36,26 @@ public class Preferences {
       return true;
   }
 
-  public String[] getMusicList() {
+  public String[] getSongTitles() {
     return songTitles;
   }
 
-  public void setTitle(int select) {
-    playSong = songTitles[select];
+  public void playListCreate() {
+    playList = songTitles;
   }
 
-  public String getTitle() {
-    return playSong;
+  public void playListPrintAll() {
+    for (int i=0; i<playList.length; i++) {
+      System.out.println(i+1 + "번 " + playList[i]);
+    }
   }
 
+  public String findTitle(int select) {
+    if (select >= playList.length || select < 0)
+      return null;
+    else
+      return playList[select];
+  }
 }
 
 
