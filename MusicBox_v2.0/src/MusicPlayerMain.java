@@ -97,14 +97,14 @@ public class MusicPlayerMain {
                 playMusic.join();
                 } catch (InterruptedException e) {
               }
-//
-//              System.out.println("1. 나가기");
-//                int stop = scanner.nextInt();
-//                if (stop == 1) {
-//                  playMusic.isInterrupted();
-//                  playMusic.musicStop();
-//                  run3 = false;
-//              }
+
+              System.out.println("1. 나가기");
+                int stop = scanner.nextInt();
+                if (stop == 1) {
+                  playMusic.isInterrupted();
+                  playMusic.musicStop();
+                  run3 = false;
+              }
 
             } else {
               System.out.println("재생을 완료했습니다.");
