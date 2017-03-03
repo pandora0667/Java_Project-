@@ -13,8 +13,8 @@ public class Preferences {
 
   // Constructor
   public Preferences() {
-//    songTitles = null;
-//    playList = null;
+    songTitles = null;
+    playList = null;
     path = new File("D:\\Music");
     directorySearcher();
   }

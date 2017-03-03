@@ -1,3 +1,4 @@
+import java.util.EventListener;
 import java.util.Scanner;
 
 /**
@@ -94,7 +95,16 @@ public class MusicPlayerMain {
 
               try {
                 playMusic.join();
-                } catch (InterruptedException e) {}
+                } catch (InterruptedException e) {
+              }
+//
+//              System.out.println("1. 나가기");
+//                int stop = scanner.nextInt();
+//                if (stop == 1) {
+//                  playMusic.isInterrupted();
+//                  playMusic.musicStop();
+//                  run3 = false;
+//              }
 
             } else {
               System.out.println("재생을 완료했습니다.");
@@ -109,7 +119,7 @@ public class MusicPlayerMain {
             System.out.println("디렉토리에 음악이 없습니다. 추가하고 다시 실행하세요.");
             return;
           }
-          preferences.checkPlayer();
+          preferences.playListCreate();
           System.out.println("재생목록이 갱신되었습니다.");
           break;
 
